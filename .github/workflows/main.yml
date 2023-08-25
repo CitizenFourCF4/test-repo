@@ -13,4 +13,4 @@ jobs:
       - uses: 8BitJonny/gh-get-current-pr@2.2.0
         id: PR
 
-      - run: echo "Your PR title is ${{ steps.PR.outputs.pr.title }} and its user login is ${{ steps.PR.outputs.pr.user.login}}  and merged_at ${{steps.PR.outputs.pr.merged_at}} and description is ${{steps.PR.outputs.pr.description}}"       
+      - run: echo "${{ steps.PR.outputs }} Your PR title is ${{ steps.PR.outputs.title }} and its user login is ${{ steps.PR.outputs.user.login}}  and merged_at ${{steps.PR.outputs.merged_at}} and description is ${{steps.PR.outputs.description}} and its JSON is ${{ steps.PR.outputs.pr }}"       
