@@ -11,4 +11,4 @@ jobs:
       - name: Get repository code
         uses: actions/checkout@v3
       - name: Print context
-        run: echo "${{ toJSON(github.event.push) }}"        
+        run: echo "${{ toJSON(github.event.head_commit) }}"        
