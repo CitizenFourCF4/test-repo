@@ -10,5 +10,7 @@ jobs:
     steps:
       - name: Get repository code
         uses: actions/checkout@v3
-      - name: Print context
-        run: echo "${{ toJSON(github.event.head_commit) }}"        
+      - uses: 8BitJonny/gh-get-current-pr@2.2.0
+        id: PR
+
+      - run: echo "Your PR number is ${{ steps.PR.outputs.number }} and its JSON is ${{ steps.PR.outputs.pr }}"       
