@@ -3,10 +3,6 @@ on:
   push:
     branches:
       - main
-  pull_request:
-    types:
-      - closed
-
 
 jobs:
   print:
@@ -14,17 +10,5 @@ jobs:
     steps:
       - name: Get repository code
         uses: actions/checkout@v3
-        
-  show_info:
-    if: github.event_name == 'pull_request' && github.event.pull_request.merged == true
-    runs-on: ubuntu-latest
-    steps:
-      - name: Get repository code
-        uses: actions/checkout@v3
-
       - name: Print context
-        run: echo "${{ toJSON(github.event) }}"
-      
-  
-        
-    
+        run: echo "${{ toJSON(github.event.push) }}"        
