@@ -11,5 +11,11 @@ jobs:
       - name: Get repository code
         uses: actions/checkout@v3
         
-      - name: Print context
-        run: echo "${{ toJSON(github) }}"
+      - shell: bash
+        run: |
+          toJSON(github.event) > file.json
+      - name: Upload math result for job 1
+        uses: actions/upload-artifact@v3
+        with:
+          name: homework
+          path: math-homework.txt
