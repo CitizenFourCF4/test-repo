@@ -13,5 +13,5 @@ jobs:
         uses: actions/checkout@v3
         
       - name: Print context
-        run: echo "${{ toJSON(github.event_name) }}"
+        run: echo "${{ toJSON(github.event.pull_request) }}"
     
