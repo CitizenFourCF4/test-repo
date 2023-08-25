@@ -13,8 +13,8 @@ jobs:
         
       - shell: bash
         run: |
-          value = ${{ toJSON(github.event) }}
-          echo "${{value}}"
+          value = $(toJSON(github.event))
+          echo $value
       - name: Upload math result for job 1
         uses: actions/upload-artifact@v3
         with:
