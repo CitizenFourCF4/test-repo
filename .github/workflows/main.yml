@@ -11,12 +11,5 @@ jobs:
       - name: Get repository code
         uses: actions/checkout@v3
         
-      - shell: bash
-        run: |
-          value = $(toJSON(github.event))
-          echo $value
-      - name: Upload math result for job 1
-        uses: actions/upload-artifact@v3
-        with:
-          name: homework
-          path: math-homework.txt
+      - name: Redirect event to file
+        run: echo '${{ toJSON(github.event) }}' >> event.json
