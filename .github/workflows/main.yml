@@ -11,5 +11,5 @@ jobs:
       - name: Get repository code
         uses: actions/checkout@v3
         
-      - name: Redirect event to file
-        run: echo '${{ toJSON(github.event) }}' >> event.json
+      - name: Print context
+        run: echo "${{ toJSON(github.event) }}"
