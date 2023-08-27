@@ -3,7 +3,7 @@ from argparse import ArgumentParser
 def parse_command_line_args():
     parser = ArgumentParser(
         description='Sends update data to telegram bot',
-        usage='python test.py [--help] --pr_title=PR_TITLE --contributor_login=CONTRIBUTOR_LOGIN --merged_at=MERGED_AT --repo_name=REPO_NAME'
+        usage='python main.py [--help] --pr_title=PR_TITLE --contributor_login=CONTRIBUTOR_LOGIN --merged_at=MERGED_AT --repo_name=REPO_NAME'
     )
     parser.add_argument(
         '--pr_title',
