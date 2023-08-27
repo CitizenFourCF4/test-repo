@@ -11,6 +11,13 @@ jobs:
     steps:
       - name: Get repository code
         uses: actions/checkout@v3
+      
+      - name: Get working directory
+        run: pwd
+
+      - name: Install requirements
+        # Устанавливаем зависимости
+        run: pip install -r requirements.txt
         
       - uses: 8BitJonny/gh-get-current-pr@2.2.0
         id: PR
