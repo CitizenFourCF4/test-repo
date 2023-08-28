@@ -7,7 +7,7 @@ do
    export "$KEY"="$VALUE"
 done
 
-PARSE_MODE="Markdown"
+PARSE_MODE="MarkdownV2"
 HEADER="*UPDATE ⚙️*"
 WHAT_CHANGED="*WHAT CHANGED?*"
 repository_name = "\`repository name\`"
