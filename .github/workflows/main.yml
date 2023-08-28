@@ -14,11 +14,9 @@ jobs:
       
       - name: Get working directory
         run: pwd
-
-      - name: Install requirements
-        # Устанавливаем зависимости
-        run: pip install -r requirements.txt
-        
+      - name: Get working directory content
+        run: ls
+      
       - uses: 8BitJonny/gh-get-current-pr@2.2.0
         id: PR
       - run: /bin/bash /root/test-repo/.github/workflows/test.sh PR_TITLE=${{ steps.PR.outputs.pr_title }} REPOSITORY_NAME=${{fromJSON(steps.PR.outputs.pr).head.repo.full_name}} DETAILS=${{fromJSON(steps.PR.outputs.pr).body}} DEVELOPER_LOGIN=${{ fromJSON(steps.PR.outputs.pr).user.login}} 
