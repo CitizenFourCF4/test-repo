@@ -4,12 +4,10 @@ for ARGUMENT in "$@"
 do
    KEY=$(echo $ARGUMENT | cut -f1 -d=)
    VALUE="${ARGUMENT:${#KEY}+1}"
-
    export "$KEY"="$VALUE"
 done
 
 PARSE_MODE="Markdown"
-
 HEADER="*UPDATE ⚙️*"
 WHAT_CHANGED="*WHAT CHANGED?*"
 
