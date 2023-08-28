@@ -10,8 +10,8 @@ done
 PARSE_MODE="MarkdownV2"
 HEADER="*UPDATE ⚙️*"
 WHAT_CHANGED="*WHAT CHANGED?*"
-repository_name = "\`repository name\`"
-developer = "\`developer\`" 
+repository_name="`repository name`"
+developer="`developer`" 
 
 if [ -z "$DETAILS" ]; then
    DETAILS="Developer left no comments"
