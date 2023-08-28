@@ -19,3 +19,4 @@ fi
 
 MESSAGE="$HEADER%0A%0A$PR_TITLE%0A%0A$WHAT_CHANGED%0A$DETAILS%0A%0A$repository_name | $REPOSITORY_NAME%0A$developer | $DEVELOPER_LOGIN"
 curl -s -X POST "https://api.telegram.org/bot$BOT_API_KEY/sendMessage" -d chat_id="$CHAT_ID" -d text="$MESSAGE" -d parse_mode="$PARSE_MODE"
+
