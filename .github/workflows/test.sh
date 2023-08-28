@@ -8,8 +8,6 @@ do
    export "$KEY"="$VALUE"
 done
 
-BOT_API_KEY="6634635160:AAG2A8EHdfRafEOZUsKgpEjAaz8uWy0yjYg"
-CHAT_ID=-1001901345667
 PARSE_MODE="Markdown"
 
 HEADER="*UPDATE ⚙️*"
