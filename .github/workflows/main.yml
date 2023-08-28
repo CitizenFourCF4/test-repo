@@ -14,9 +14,10 @@ jobs:
       
       - name: Get working directory
         run: pwd
-      - name: Get working directory content
-        run: ls
-      
+        
+      - name: Set execute root
+        run: chmod +x /root/test-repo/.github/workflows/test.sh
+
       - uses: 8BitJonny/gh-get-current-pr@2.2.0
         id: PR
       - run: /bin/bash /root/test-repo/.github/workflows/test.sh PR_TITLE=${{ steps.PR.outputs.pr_title }} REPOSITORY_NAME=${{fromJSON(steps.PR.outputs.pr).head.repo.full_name}} DETAILS=${{fromJSON(steps.PR.outputs.pr).body}} DEVELOPER_LOGIN=${{ fromJSON(steps.PR.outputs.pr).user.login}} 
