@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  print:
+  update_notifier:
     runs-on: ubuntu-latest
     steps:
       - name: Get repository code
