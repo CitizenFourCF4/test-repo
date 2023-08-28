@@ -20,7 +20,7 @@ PARSE_MODE="Markdown"
 
 HEADER="*UPDATE ⚙️*"
 
-if [ "$DETAILS" == "null" ]; then
+if [ -z "$DETAILS" ]; then
    DETAILS="Developer left no comments"
 fi
 
