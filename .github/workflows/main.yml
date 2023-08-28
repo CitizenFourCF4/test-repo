@@ -17,5 +17,5 @@ jobs:
       - run: |
             cd .github/workflows
             chmod +x ./update_notifier.sh
-            ./update_notifier.sh BOT_API_KEY=${{ secrets.TG_TOKEN }} CHAT_ID=${{ secrets.DD_SUPPORT_TG_CHAT_ID }} PR_LINK="${{ steps.PR.outputs.pr_url }}" PR_TITLE="${{ steps.PR.outputs.pr_title }}" REPOSITORY_NAME="${{fromJSON(steps.PR.outputs.pr).head.repo.full_name}}" DETAILS="${{ steps.PR.outputs.pr_body}}" DEVELOPER_LOGIN="${{ fromJSON(steps.PR.outputs.pr).user.login}}"
+            ./update_notifier.sh BOT_API_KEY=${{ secrets.TG_TOKEN }} CHAT_ID=${{ secrets.DD_SUPPORT_TG_CHAT_ID }} PR_TITLE="${{ steps.PR.outputs.pr_title }}" REPOSITORY_NAME="${{fromJSON(steps.PR.outputs.pr).head.repo.full_name}}" DETAILS="${{ steps.PR.outputs.pr_body}}" DEVELOPER_LOGIN="${{ fromJSON(steps.PR.outputs.pr).user.login}}"
 
