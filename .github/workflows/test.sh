@@ -20,5 +20,4 @@ if [ -z "$DETAILS" ]; then
 fi
 
 MESSAGE="$HEADER%0A%0A$PR_TITLE%0A%0A$WHAT_CHANGED%0A$DETAILS%0A%0A_repository name_| $REPOSITORY_NAME%0A_developer_| $DEVELOPER_LOGIN%0A_link_| $PR_LINK"
-
-# curl -s -X POST "https://api.telegram.org/bot$BOT_API_KEY/sendMessage" -d chat_id=$CHAT_ID -d text="$MESSAGE" -d parse_mode="$PARSE_MODE"
+curl -s -X POST "https://api.telegram.org/bot$BOT_API_KEY/sendMessage" -d chat_id=$CHAT_ID -d text="$MESSAGE" -d parse_mode="$PARSE_MODE"
