@@ -7,13 +7,13 @@ do
    export "$KEY"="$VALUE"
 done
 
-PARSE_MODE="Markdown"
-HEADER="*UPDATE ⚙️*"
-WHAT_CHANGED="*WHAT CHANGED?*"
+PARSE_MODE="HTML"
+HEADER="<b>UPDATE ⚙️</b>"
+WHAT_CHANGED="<b>WHAT CHANGED?</b>"
 
 if [ -z "$DETAILS" ]; then
    DETAILS="Developer left no comments"
 fi
 
-MESSAGE="$HEADER%0A%0A$PR_TITLE%0A%0A$WHAT_CHANGED%0A$DETAILS%0A%0A_repository name_ | $REPOSITORY_NAME%0A_developer_ | $DEVELOPER_LOGIN%0A"
+MESSAGE="$HEADER%0A%0A$PR_TITLE%0A%0A$WHAT_CHANGED%0A$DETAILS%0A%0A<i>repository name</i> | $REPOSITORY_NAME%0A<i>developer</i> | $DEVELOPER_LOGIN"
 curl -s -X POST "https://api.telegram.org/bot$BOT_API_KEY/sendMessage" -d chat_id=$CHAT_ID -d text="$MESSAGE" -d parse_mode="$PARSE_MODE"
