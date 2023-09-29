@@ -12,6 +12,8 @@ PARSE_MODE="HTML"
 HEADER="<b>UPDATE ⚙️</b>"
 WHAT_CHANGED="<b>WHAT CHANGED?</b>"
 
+PR_TITLE="${PR_TITLE//&/%26}"
+
 if [ -z "$DETAILS" ]; then
    DETAILS="Developer left no comments"
 fi
