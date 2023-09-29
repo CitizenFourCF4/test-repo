@@ -7,6 +7,7 @@ do
    export "$KEY"="$VALUE"
 done
 
+
 PARSE_MODE="HTML"
 HEADER="<b>UPDATE ⚙️</b>"
 WHAT_CHANGED="<b>WHAT CHANGED?</b>"
