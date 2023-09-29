@@ -4,6 +4,9 @@ for ARGUMENT in "$@"
 do
    KEY=$(echo $ARGUMENT | cut -f1 -d=)
    VALUE="${ARGUMENT:${#KEY}+1}"
+   
+   VALUE="${VALUE//&/%26}"
+   VALUE="${VALUE//&/%7C}"
    export "$KEY"="$VALUE"
 done
 
@@ -11,8 +14,6 @@ done
 PARSE_MODE="HTML"
 HEADER="<b>UPDATE ⚙️</b>"
 WHAT_CHANGED="<b>WHAT CHANGED?</b>"
-
-PR_TITLE="${PR_TITLE//&/%26}"
 
 if [ -z "$DETAILS" ]; then
    DETAILS="Developer left no comments"
