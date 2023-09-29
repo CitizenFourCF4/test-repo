@@ -6,7 +6,7 @@ do
    VALUE="${ARGUMENT:${#KEY}+1}"
    
    VALUE="${VALUE//&/%26}"
-   VALUE="${VALUE//&/%7C}"
+   VALUE="${VALUE//|/%7C}"
    export "$KEY"="$VALUE"
 done
 
